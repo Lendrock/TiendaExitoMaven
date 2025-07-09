@@ -9,6 +9,13 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
-        <exec.mainClass>TiendaExito</exec.mainClass>
+        <exec.mainClass>org.tiendaexito.system.Main</exec.mainClass>
     </properties>
+    <dependencies> 
+        <dependency> 
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20230227</version>
+        </dependency>
+    </dependencies>
 </project>
