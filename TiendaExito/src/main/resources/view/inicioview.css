@@ -13,13 +13,6 @@
     -fx-alignment: center-left;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0.1, 0, 2);
 }
-.cuadro-cafe {
-    -fx-background-color: #4B2E24; /* Café oscuro */
-    -fx-background-radius: 20;     /* Bordes redondeados */
-    -fx-padding: 20;
-    -fx-effect: dropshadow(gaussian, black, 40, 0.6, 0, 0); /* Sombra negra suave */
-}
-
 
 /* Texto del logo */
 .logo-tienda {
@@ -43,12 +36,7 @@
     -fx-text-fill: black;
     -fx-padding: 60 0 10 40;
 }
-.titulo-principal2 {
-    -fx-font-size: 36px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #ffffff;
-    -fx-padding: 60 0 10 40;
-}
+
 /* Subtítulo debajo del título */
 .subtitulo {
     -fx-font-size: 18px;
@@ -66,4 +54,10 @@
     -fx-background-radius: 6;
     -fx-cursor: hand;
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 6, 0.3, 0, 2);
+}
+.cuadro-cafe {
+    -fx-background-color: #6b4c3b; /* Café oscuro */
+    -fx-background-radius: 20;     /* Bordes redondeados */
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, black, 30, 0.6, 0, 0); /* Sombra negra en forma circular */
 }

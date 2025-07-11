@@ -1,0 +1,45 @@
+/* Fondo claro tipo pergamino */
+.fondo-claro {
+    -fx-background-color: #fcefdc;
+    -fx-background-radius: 10;
+}
+
+/* Panel lateral oscuro */
+.panel-lateral {
+    -fx-background-color: #1b1b1b;
+    -fx-padding: 20 10 20 10;
+}
+
+/* Título del panel lateral */
+.titulo-lateral {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+/* Botones del panel lateral */
+.boton-lateral {
+    -fx-background-color: #5c4033;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, black, 8, 0.3, 0, 1);
+}
+
+/* Título principal */
+.titulo-principal {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #3b2c26;
+}
+
+/* Botones principales */
+.boton-principal {
+    -fx-background-color: #5c4033;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-background-radius: 8;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, black, 10, 0.4, 0, 2);
+}
