@@ -10,7 +10,7 @@
    <children>
       <ImageView fitHeight="592.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../Users/Usuario/Downloads/ChatGPT%20Image%2010%20jul%202025,%2006_24_08%20p.m..png" />
+            <Image url="@../image/ChatGPT%20Image%2010%20jul%202025,%2006_24_08%20p.m..png" />
          </image>
       </ImageView>
       <Label layoutX="70.0" layoutY="191.0" prefHeight="57.0" prefWidth="302.0" styleClass="cuadro-cafe" stylesheets="@inicioview.css" textFill="#a81818" />
@@ -33,6 +33,6 @@
          </font>
       </Label>
       <Label layoutX="54.0" layoutY="226.0" prefHeight="123.0" prefWidth="343.0" styleClass="titulo-principal" stylesheets="@inicioview.css" text="INSTRUMENTO" />
-      <Label layoutX="120.0" layoutY="314.0" prefHeight="123.0" prefWidth="343.0" styleClass="titulo-principal" stylesheets="@inicioview.css" text="IDEAL" />
+      <Label layoutX="132.0" layoutY="314.0" prefHeight="123.0" prefWidth="343.0" styleClass="titulo-principal" stylesheets="@inicioview.css" text="IDEAL" />
    </children>
 </AnchorPane>

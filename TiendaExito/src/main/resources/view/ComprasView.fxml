@@ -15,41 +15,41 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="600" prefWidth="800" stylesheets="@productosview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane prefHeight="600" prefWidth="800" stylesheets="@comprasview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
 
     <left>
-        <VBox alignment="TOP_CENTER" prefWidth="111.0" spacing="15" BorderPane.alignment="CENTER">
+        <VBox alignment="TOP_CENTER" prefWidth="111.0" spacing="15" styleClass="root1" BorderPane.alignment="CENTER">
             <padding>
                 <Insets bottom="20" left="10" right="10" top="20" />
             </padding>
-            <Button prefHeight="30.0" prefWidth="83.0" styleClass="boton-lateral" text="NUEVO" />
-            <Button prefHeight="30.0" prefWidth="84.0" styleClass="boton-lateral" text="EDITAR" />
-            <Button styleClass="boton-lateral" text="ELIMINAR" />
-            <Button styleClass="boton-lateral" stylesheets="@productosview.css" text="REGRESAR" />
-         <ImageView fitHeight="173.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+            <Button prefHeight="30.0" prefWidth="83.0" styleClass="botones-accion" text="NUEVO" />
+            <Button prefHeight="30.0" prefWidth="84.0" styleClass="botones-accion" text="EDITAR" />
+            <Button prefHeight="32.0" prefWidth="83.0" styleClass="botones-accion" text="ELIMINAR" />
+            <Button prefHeight="32.0" prefWidth="80.0" stylesheets="@productosview.css" text="REGRESAR" />
+         <ImageView fitHeight="173.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" styleClass="imagen-logo">
             <image>
-               <Image url="@../image/Gibson.png" />
+               <Image url="@../image/TD-1K.png" />
             </image>
          </ImageView>
         </VBox>
     </left>
 
     <center>
-        <VBox alignment="TOP_CENTER" prefHeight="576.0" prefWidth="681.0" spacing="15" styleClass="fondo-claro" stylesheets="@productosview.css" BorderPane.alignment="CENTER">
+        <VBox alignment="TOP_CENTER" prefHeight="576.0" prefWidth="681.0" spacing="15" styleClass="root" stylesheets="@productosview.css" BorderPane.alignment="CENTER">
             <padding>
                 <Insets bottom="20" left="20" right="20" top="20" />
             </padding>
 
-            <Label styleClass="titulo-principal" text="Productos" />
+            <Label styleClass="titulo-principal" text="Compras" />
 
-            <TableView prefHeight="200" prefWidth="600">
+            <TableView prefHeight="200" prefWidth="600" styleClass="tabla-productos">
                 <columns>
                     <TableColumn text="ID" />
-                    <TableColumn prefWidth="108.0" text="Nombre" />
-                    <TableColumn prefWidth="104.0" text="Descripcion" />
-                    <TableColumn prefWidth="116.0" text="Precio" />
-               <TableColumn prefWidth="55.0" text="Stock" />
-               <TableColumn prefWidth="185.0" text="Categoria" />
+                    <TableColumn prefWidth="108.0" text="IDCLIENTE" />
+                    <TableColumn prefWidth="104.0" text="FECHA" />
+                    <TableColumn prefWidth="116.0" text="TOTAL" />
+               <TableColumn prefWidth="110.0" text="METODOPAGO" />
+               <TableColumn prefWidth="130.0" text="ESTADO" />
                 </columns>
             </TableView>
          <GridPane prefHeight="163.0" prefWidth="649.0">
@@ -57,8 +57,8 @@
              <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.0" minWidth="10.0" prefWidth="92.0" />
                <ColumnConstraints hgrow="SOMETIMES" maxWidth="221.0" minWidth="10.0" prefWidth="182.0" />
                <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.0" minWidth="10.0" prefWidth="95.0" />
-               <ColumnConstraints hgrow="SOMETIMES" maxWidth="209.0" minWidth="10.0" prefWidth="83.0" />
-             <ColumnConstraints hgrow="SOMETIMES" maxWidth="192.0" minWidth="10.0" prefWidth="192.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="209.0" minWidth="10.0" prefWidth="92.0" />
+             <ColumnConstraints hgrow="SOMETIMES" maxWidth="192.0" minWidth="10.0" prefWidth="184.0" />
            </columnConstraints>
            <rowConstraints>
                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -68,11 +68,11 @@
            </rowConstraints>
             <children>
                <Label text="ID" textAlignment="RIGHT" />
-               <Label text="NOMBRE" textAlignment="RIGHT" GridPane.rowIndex="1" />
-               <Label text="DESCRIPCION" textAlignment="RIGHT" GridPane.rowIndex="2" />
-               <Label text="PRECIO" textAlignment="RIGHT" GridPane.rowIndex="3" />
-               <Label text="STOCK" textAlignment="RIGHT" GridPane.columnIndex="3" />
-               <Label text="CATEGORIA" textAlignment="RIGHT" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+               <Label text="IDCLIENTE" textAlignment="RIGHT" GridPane.rowIndex="1" />
+               <Label text="FECHA" textAlignment="RIGHT" GridPane.rowIndex="2" />
+               <Label text="TOTAL" textAlignment="RIGHT" GridPane.rowIndex="3" />
+               <Label prefHeight="12.0" prefWidth="99.0" text="METODOPAGO" textAlignment="RIGHT" GridPane.columnIndex="3" />
+               <Label text="ESTADO" textAlignment="RIGHT" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                <TextField prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="1" />
                <TextField prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                <TextField prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
@@ -83,8 +83,8 @@
          </GridPane>
 
             <HBox alignment="CENTER" spacing="20">
-                <Button styleClass="boton-lateral" stylesheets="@productosview.css" text="GUARDAR" />
-                <Button styleClass="boton-lateral" text="CANCELAR" />
+                <Button styleClass="boton-principal" stylesheets="@productosview.css" text="GUARDAR" />
+                <Button styleClass="boton-principal" text="CANCELAR" />
             </HBox>
         </VBox>
     </center>

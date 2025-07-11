@@ -1,0 +1,68 @@
+/* Fondo general de la vista */
+.root {
+    -fx-background-color: #e3c9a1; /* Marrón claro (más oscuro que pergamino) */
+}
+/* Fondo general de la vista */
+.root1 {
+    -fx-background-color: black; /* Marrón claro (más oscuro que pergamino) */
+}
+/* Panel lateral izquierdo (negro) */
+.panel-lateral {
+    -fx-background-color: #000000; /* Negro */
+}
+
+/* Botones del menú lateral (café claro sobre negro) */
+.boton-menu {
+    -fx-background-color: #7b4f3d; /* Café más claro */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.1), 8, 0.3, 0, 2);
+    -fx-cursor: hand;
+}
+
+/* Título principal */
+.titulo {
+    -fx-font-size: 26px;
+    -fx-font-family: "Georgia", serif;
+    -fx-text-fill: #3b2c26;
+    -fx-font-weight: bold;
+}
+
+/* Estilo de la tabla */
+.tabla-productos {
+    -fx-background-color: white;
+    -fx-border-color: #c4a484;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+}
+
+/* Encabezado de la tabla */
+.tabla-productos .column-header-background {
+    -fx-background-color: linear-gradient(#d8b38d, #c79d6c);
+}
+
+/* Campos de texto */
+.campo-texto {
+    -fx-background-color: white;
+    -fx-border-color: #a17454;
+    -fx-border-radius: 5;
+    -fx-padding: 6 8 6 8;
+    -fx-font-size: 13px;
+}
+
+/* Botones de acción (guardar/cancelar) */
+.botones-accion .button {
+    -fx-background-color: #5c4033;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-background-radius: 10;
+    -fx-padding: 8 16;
+    -fx-effect: dropshadow(gaussian, black, 10, 0.4, 0, 2);
+}
+
+/* Imagen en el lateral */
+.imagen-logo {
+    -fx-effect: dropshadow(gaussian, gray, 5, 0.3, 0, 1);
+    -fx-padding: 10;
+}
