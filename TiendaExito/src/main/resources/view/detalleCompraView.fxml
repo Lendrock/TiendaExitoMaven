@@ -3,7 +3,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -17,20 +16,20 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="600" prefWidth="800" stylesheets="@comprasview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane prefHeight="600" prefWidth="800" stylesheets="@detallecompraview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
 
     <left>
         <VBox alignment="TOP_CENTER" prefWidth="111.0" spacing="15" styleClass="root1" BorderPane.alignment="CENTER">
             <padding>
                 <Insets bottom="20" left="10" right="10" top="20" />
             </padding>
-            <Button prefHeight="30.0" prefWidth="83.0" styleClass="botones-accion" text="NUEVO" />
-            <Button prefHeight="30.0" prefWidth="84.0" styleClass="botones-accion" text="EDITAR" />
-            <Button prefHeight="32.0" prefWidth="83.0" styleClass="botones-accion" text="ELIMINAR" />
-            <Button prefHeight="32.0" prefWidth="80.0" stylesheets="@productosview.css" text="REGRESAR" />
-         <ImageView fitHeight="173.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" styleClass="imagen-logo">
+            <Button prefHeight="30.0" prefWidth="83.0" styleClass="boton-lateral" text="NUEVO" />
+            <Button prefHeight="30.0" prefWidth="84.0" styleClass="boton-lateral" text="EDITAR" />
+            <Button prefHeight="33.0" prefWidth="80.0" styleClass="boton-lateral" text="ELIMINAR" />
+            <Button prefHeight="36.0" prefWidth="81.0" styleClass="botones-accion" stylesheets="@productosview.css" text="REGRESAR" />
+         <ImageView fitHeight="173.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../image/TD-1K.png" />
+               <Image url="@../image/Gibson.png" />
             </image>
          </ImageView>
         </VBox>
@@ -42,16 +41,16 @@
                 <Insets bottom="20" left="20" right="20" top="20" />
             </padding>
 
-            <Label styleClass="titulo" text="Compras" />
+            <Label styleClass="titulo" text="Detalle Compra" />
 
-            <TableView prefHeight="200" prefWidth="600" styleClass="tabla-productos">
+            <TableView prefHeight="200" prefWidth="600">
                 <columns>
                     <TableColumn text="ID" />
-                    <TableColumn prefWidth="108.0" text="IDCLIENTE" />
-                    <TableColumn prefWidth="104.0" text="FECHA" />
-                    <TableColumn prefWidth="116.0" text="TOTAL" />
-               <TableColumn prefWidth="110.0" text="METODOPAGO" />
-               <TableColumn prefWidth="130.0" text="ESTADO" />
+                    <TableColumn prefWidth="108.0" text="IDCOMPRA" />
+                    <TableColumn prefWidth="104.0" text="IDPRODUCTO" />
+                    <TableColumn prefWidth="116.0" text="CANTIDAD" />
+               <TableColumn prefWidth="136.0" text="PRECIO UNITARIO" />
+               <TableColumn prefWidth="104.0" text="SUBTOTAL" />
                 </columns>
             </TableView>
          <GridPane prefHeight="163.0" prefWidth="649.0">
@@ -59,8 +58,8 @@
              <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.0" minWidth="10.0" prefWidth="92.0" />
                <ColumnConstraints hgrow="SOMETIMES" maxWidth="221.0" minWidth="10.0" prefWidth="182.0" />
                <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.0" minWidth="10.0" prefWidth="95.0" />
-               <ColumnConstraints hgrow="SOMETIMES" maxWidth="209.0" minWidth="10.0" prefWidth="92.0" />
-             <ColumnConstraints hgrow="SOMETIMES" maxWidth="192.0" minWidth="10.0" prefWidth="184.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="209.0" minWidth="10.0" prefWidth="83.0" />
+             <ColumnConstraints hgrow="SOMETIMES" maxWidth="192.0" minWidth="10.0" prefWidth="192.0" />
            </columnConstraints>
            <rowConstraints>
                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -70,17 +69,17 @@
            </rowConstraints>
             <children>
                <Label text="ID" textAlignment="RIGHT" />
-               <Label text="IDCLIENTE" textAlignment="RIGHT" GridPane.rowIndex="1" />
-               <Label text="FECHA" textAlignment="RIGHT" GridPane.rowIndex="2" />
-               <Label text="TOTAL" textAlignment="RIGHT" GridPane.rowIndex="3" />
-               <Label prefHeight="12.0" prefWidth="99.0" text="METODOPAGO" textAlignment="RIGHT" GridPane.columnIndex="3" />
-               <Label text="ESTADO" textAlignment="RIGHT" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+               <Label text="IDCOMPRA" textAlignment="RIGHT" GridPane.rowIndex="1" />
+               <Label text="IDPRODUCTO" textAlignment="RIGHT" GridPane.rowIndex="2" />
+               <Label text="CANTIDAD" textAlignment="RIGHT" GridPane.rowIndex="3" />
+               <Label text="PRECIO U" textAlignment="RIGHT" GridPane.columnIndex="3" />
+               <Label text="SUBTOTAL" textAlignment="RIGHT" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                <TextField prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="1" />
                <TextField prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                <TextField prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="4" />
                <TextField prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-               <ComboBox prefHeight="25.0" prefWidth="187.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-               <DatePicker prefHeight="25.0" prefWidth="222.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               <ComboBox prefHeight="25.0" prefWidth="192.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               <ComboBox prefHeight="25.0" prefWidth="185.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             </children>
          </GridPane>
 
