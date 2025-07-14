@@ -16,17 +16,17 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="600" prefWidth="800" stylesheets="@detallecompraview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane prefHeight="600" prefWidth="800" stylesheets="@detallecompraview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tiendaexito.controller.detalleCompraController">
 
     <left>
         <VBox alignment="TOP_CENTER" prefWidth="111.0" spacing="15" styleClass="root1" BorderPane.alignment="CENTER">
             <padding>
                 <Insets bottom="20" left="10" right="10" top="20" />
             </padding>
-            <Button prefHeight="30.0" prefWidth="83.0" styleClass="boton-lateral" text="NUEVO" />
-            <Button prefHeight="30.0" prefWidth="84.0" styleClass="boton-lateral" text="EDITAR" />
-            <Button prefHeight="33.0" prefWidth="80.0" styleClass="boton-lateral" text="ELIMINAR" />
-            <Button prefHeight="36.0" prefWidth="81.0" styleClass="botones-accion" stylesheets="@productosview.css" text="REGRESAR" />
+            <Button prefHeight="30.0" prefWidth="83.0" styleClass="boton-menu" text="NUEVO" />
+            <Button prefHeight="30.0" prefWidth="84.0" styleClass="boton-menu" text="EDITAR" />
+            <Button prefHeight="33.0" prefWidth="80.0" styleClass="boton-menu" text="ELIMINAR" />
+            <Button onAction="#escenaPaginaInicio" prefHeight="36.0" prefWidth="81.0" styleClass="boton-menu" stylesheets="@productosview.css" text="REGRESAR" />
          <ImageView fitHeight="173.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="@../image/Gibson.png" />
@@ -43,14 +43,14 @@
 
             <Label styleClass="titulo" text="Detalle Compra" />
 
-            <TableView prefHeight="200" prefWidth="600">
+            <TableView prefHeight="200" prefWidth="600" styleClass="tabla-detalleCompra">
                 <columns>
                     <TableColumn text="ID" />
-                    <TableColumn prefWidth="108.0" text="IDCOMPRA" />
-                    <TableColumn prefWidth="104.0" text="IDPRODUCTO" />
-                    <TableColumn prefWidth="116.0" text="CANTIDAD" />
-               <TableColumn prefWidth="136.0" text="PRECIO UNITARIO" />
-               <TableColumn prefWidth="104.0" text="SUBTOTAL" />
+                    <TableColumn prefWidth="108.0" text="IDCompra" />
+                    <TableColumn prefWidth="104.0" text="Producto" />
+                    <TableColumn prefWidth="116.0" text="Cantidad" />
+               <TableColumn prefWidth="136.0" text="Precio Unitario" />
+               <TableColumn prefWidth="104.0" text="SubTotal" />
                 </columns>
             </TableView>
          <GridPane prefHeight="163.0" prefWidth="649.0">

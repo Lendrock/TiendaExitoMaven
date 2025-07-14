@@ -21,6 +21,17 @@ public class inicioController implements Initializable {
     public void setPrincipal(Main principal) {
         this.principal = principal;
     }
-
+    
+    public void escenaCompras() {
+        principal.escenaCompras();
+    }
+    //
+    public void escenaProductos() {
+        principal.escenaProductos();
+    }
+    
+    public void escenaDetalleCompra() {
+        principal.escenaDetalleCompra();
+    }
     
 }

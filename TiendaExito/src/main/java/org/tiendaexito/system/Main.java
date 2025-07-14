@@ -8,7 +8,10 @@ import javafx.fxml.Initializable;
 import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.tiendaexito.controller.comprasController;
+import org.tiendaexito.controller.detalleCompraController;
 import org.tiendaexito.controller.inicioController; 
+import org.tiendaexito.controller.productosController;
 
 /**
  *
@@ -52,6 +55,33 @@ public class Main extends Application {
             pic.setPrincipal(this);
         } catch (IOException ex) {
             System.out.println("Error al cambio a InicioView");
+            ex.printStackTrace();
+        }
+    }
+    public void escenaCompras() {
+        try {
+            comprasController cm = (comprasController) cambiarEscena("ComprasView.fxml", 800, 600);
+            cm.setPrincipal(this);
+        } catch (IOException ex) {
+            System.out.println("Error al cambio a comprasView");
+            ex.printStackTrace();
+        }
+    }//
+    public void escenaProductos() {
+        try {
+            productosController pc = (productosController) cambiarEscena("ProductosView.fxml", 800, 600);
+            pc.setPrincipal(this);
+        } catch (IOException ex) {
+            System.out.println("Error al cambio a productosView");
+            ex.printStackTrace();
+        }
+    }
+    public void escenaDetalleCompra() {
+        try {
+            detalleCompraController dcc = (detalleCompraController) cambiarEscena("detalleCompraView.fxml", 800, 600);
+            dcc.setPrincipal(this);
+        } catch (IOException ex) {
+            System.out.println("Error al cambio a detalleCompraView");
             ex.printStackTrace();
         }
     }
