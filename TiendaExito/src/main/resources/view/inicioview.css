@@ -23,11 +23,31 @@
 
 /* Botones del menú */
 .boton-menu {
-    -fx-background-color: transparent;
-    -fx-text-fill: #444;
-    -fx-font-size: 14px;
-    -fx-font-weight: normal;
+    -fx-background-color: transparent; 
+    -fx-border-color: transparent;     
+    -fx-text-fill: #444;               
+    -fx-font-size: 15px;               
+    -fx-font-weight: bold;            
+    -fx-padding: 5px 10px;            
+    -fx-cursor: hand;                
+    -fx-alignment: center;             
+    -fx-effect: null;                
+    -fx-background-radius: 0;         
 }
+
+/* Efecto al pasar el ratón por encima (hover) */
+.boton-menu:hover {
+    -fx-text-fill: #007bff;       
+    -fx-background-color: rgba(0, 123, 255, 0.1); 
+    -fx-background-radius: 5px;       
+}
+
+/* Efecto al hacer clic (pressed) */
+.boton-menu:pressed {
+    -fx-text-fill: #0056b3;   
+    -fx-background-color: rgba(0, 123, 255, 0.2); 
+}
+
 
 /* Título principal */
 .titulo-principal {
