@@ -1,0 +1,47 @@
+.fondo {
+    -fx-background-color: #d8c2a8; /* Fondo café claro */
+}
+
+.titulo {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4a2e1c; /* Café oscuro */
+}
+
+.campo {
+    -fx-pref-width: 250px;
+    -fx-padding: 10;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #b27b56;
+    -fx-font-size: 14px;
+}
+
+.boton {
+    -fx-background-color: #5c4033;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-background-radius: 10;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, black, 6, 0.2, 0, 2);
+}
+
+.texto {
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+}
+
+.link {
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-underline: true;
+    -fx-cursor: hand;
+}
+.root2 {
+    -fx-background-color:#444;
+}
+.root3 {
+    -fx-background-color: #000000;
+}
