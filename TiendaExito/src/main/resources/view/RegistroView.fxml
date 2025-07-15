@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="600.0"
+            xmlns:fx="http://javafx.com/fxml/1"
+            styleClass="fondo">
+
+    <stylesheets>
+        <URL value="@loginview.css" /> <!-- Usamos el mismo CSS -->
+    </stylesheets>
+
+    <VBox layoutX="100.0" layoutY="40.0" spacing="15.0" alignment="CENTER" prefWidth="400.0" prefHeight="380.0">
+        <Label text="Crear Cuenta" styleClass="titulo"/>
+
+        <TextField promptText="Nombre completo" styleClass="campo"/>
+        <TextField promptText="Correo electrónico" styleClass="campo"/>
+        <PasswordField promptText="Contraseña" styleClass="campo"/>
+        <PasswordField promptText="Confirmar contraseña" styleClass="campo"/>
+
+        <Button text="Registrarse" styleClass="boton"/>
+
+        <Label text="¿Ya tienes cuenta?" styleClass="texto"/>
+        <Hyperlink text="Inicia sesión aquí" styleClass="link"/>
+    </VBox>
+
+</AnchorPane>
