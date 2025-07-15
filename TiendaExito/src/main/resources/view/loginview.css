@@ -29,13 +29,19 @@
 }
 
 .texto {
-    -fx-text-fill: #3e2c20;
+    -fx-text-fill: white;
     -fx-font-size: 13px;
 }
 
 .link {
-    -fx-text-fill: #5c4033;
+    -fx-text-fill: white;
     -fx-font-size: 13px;
     -fx-underline: true;
     -fx-cursor: hand;
+}
+.root2 {
+    -fx-background-color:#444;
+}
+.root3 {
+    -fx-background-color: #000000;
 }
