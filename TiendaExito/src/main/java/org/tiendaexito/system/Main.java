@@ -1,4 +1,4 @@
-package org.tiendaexito.system; // Changed package to match the image
+package org.tiendaexito.system;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,7 +11,9 @@ import javafx.stage.Stage;
 import org.tiendaexito.controller.comprasController;
 import org.tiendaexito.controller.detalleCompraController;
 import org.tiendaexito.controller.inicioController; 
+import org.tiendaexito.controller.loginController;
 import org.tiendaexito.controller.productosController;
+import org.tiendaexito.controller.registerController;
 
 /**
  *
@@ -26,7 +28,7 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         this.escenarioPrincipal = stage;
 
-        escenaPaginaInicio(); 
+        escenaLogin(); 
         stage.setTitle("Tienda El Exito"); 
         stage.show();
     }
@@ -82,6 +84,24 @@ public class Main extends Application {
             dcc.setPrincipal(this);
         } catch (IOException ex) {
             System.out.println("Error al cambio a detalleCompraView");
+            ex.printStackTrace();
+        }
+    }
+    public void escenaLogin() {
+        try {
+            loginController lc = (loginController) cambiarEscena("LoginView.fxml", 606, 600);
+            lc.setPrincipal(this);
+        } catch (IOException ex) {
+            System.out.println("Error al cambio a LoginView");
+            ex.printStackTrace();
+        }
+    }
+    public void escenaRegister() {
+        try {
+            registerController rc = (registerController) cambiarEscena("RegistroView.fxml", 606, 600);
+            rc.setPrincipal(this);
+        } catch (IOException ex) {
+            System.out.println("Error al cambio a RegistroView");
             ex.printStackTrace();
         }
     }
