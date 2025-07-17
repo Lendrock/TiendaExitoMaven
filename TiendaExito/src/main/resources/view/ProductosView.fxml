@@ -84,8 +84,14 @@
 
             <HBox alignment="CENTER" spacing="20">
                 <Button styleClass="boton-menu" stylesheets="@productosview.css" text="GUARDAR" />
-                <Button styleClass="boton-menu" text="CANCELAR" />
+                <Button styleClass="boton-menu" text="Cancelar" />
             </HBox>
+         <HBox alignment="CENTER" spacing="20">
+            <children>
+               <Button styleClass="boton-menu" stylesheets="@productosview.css" text="Siguiente" />
+               <Button styleClass="boton-menu" text="Anterior" />
+            </children>
+         </HBox>
         </VBox>
     </center>
 </BorderPane>
