@@ -38,7 +38,7 @@
          </children>
       </StackPane>
 
-        <Button onAction="#agregarUsuario" styleClass="boton" text="Registrarse" />
+        <Button fx:id="btnRegistrarme" onAction="#agregarUsuario" styleClass="boton" text="Registrarse" />
 
         <Label styleClass="texto" text="¿Ya tienes cuenta?" />
         <Hyperlink onAction="#escenaLogin" styleClass="link" text="Inicia sesión aquí" />

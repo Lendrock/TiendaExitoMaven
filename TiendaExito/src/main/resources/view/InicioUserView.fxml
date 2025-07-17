@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="640.0" prefWidth="885.0" styleClass="mainFxmlClass" stylesheets="@inicioview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tiendaexito.controller.inicioController">
+<AnchorPane id="AnchorPane" prefHeight="640.0" prefWidth="885.0" styleClass="mainFxmlClass" stylesheets="@inicioview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tiendaexito.controller.inicioUserController">
    <children>
       <ImageView fitHeight="592.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -32,6 +32,6 @@
       </Label>
       <Label layoutX="54.0" layoutY="226.0" prefHeight="123.0" prefWidth="343.0" styleClass="titulo-principal" stylesheets="@inicioview.css" text="INSTRUMENTO" />
       <Label layoutX="132.0" layoutY="314.0" prefHeight="123.0" prefWidth="343.0" styleClass="titulo-principal" stylesheets="@inicioview.css" text="IDEAL" />
-      <Button layoutX="677.0" layoutY="36.0" mnemonicParsing="false" onAction="#escenaDetalleCompra" prefHeight="38.0" prefWidth="156.0" styleClass="boton-menu" text="Ver Categorias" />
+      <Button layoutX="677.0" layoutY="36.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="156.0" styleClass="boton-menu" text="Ver Categorias" />
    </children>
 </AnchorPane>

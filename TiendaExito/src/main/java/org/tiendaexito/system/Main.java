@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 import org.tiendaexito.controller.comprasController;
 import org.tiendaexito.controller.detalleCompraController;
 import org.tiendaexito.controller.inicioController; 
+import org.tiendaexito.controller.inicioUserController;
 import org.tiendaexito.controller.loginController;
 import org.tiendaexito.controller.productosController;
 import org.tiendaexito.controller.registerController;
@@ -102,6 +103,15 @@ public class Main extends Application {
             rc.setPrincipal(this);
         } catch (IOException ex) {
             System.out.println("Error al cambio a RegistroView");
+            ex.printStackTrace();
+        }
+    }
+    public void escenaInicioUser() {
+        try {
+            inicioUserController iuc = (inicioUserController) cambiarEscena("InicioUserView.fxml", 885, 640);
+            iuc.setPrincipal(this);
+        } catch (IOException ex) {
+            System.out.println("Error al cambio a InicioUserView");
             ex.printStackTrace();
         }
     }

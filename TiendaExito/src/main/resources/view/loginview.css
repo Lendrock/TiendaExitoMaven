@@ -45,3 +45,6 @@
 .root3 {
     -fx-background-color: #000000;
 }
+.boton-invisble{
+     -fx-background-color: transparent;
+}

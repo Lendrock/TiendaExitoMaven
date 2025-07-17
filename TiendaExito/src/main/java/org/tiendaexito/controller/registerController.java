@@ -15,6 +15,7 @@ import java.sql.SQLException;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import java.sql.ResultSet;
+import javafx.scene.input.KeyCode; 
 
 /**
  *
@@ -30,6 +31,9 @@ public class registerController implements Initializable {
     private PasswordField pfContrasena, pfConfirmarContrasena;
     @FXML
     private Button btnMostrarContrasena, btnMostrarContrasena1;
+
+    @FXML
+    private Button btnRegistrarme; 
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -79,13 +83,55 @@ public class registerController implements Initializable {
                 pfConfirmarContrasena.setText(newVal);
             }
         });
+
+        txtUsuario.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                txtCorreo.requestFocus();
+                event.consume();
+            }
+        });
+
+        txtCorreo.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                pfContrasena.requestFocus();
+                event.consume();
+            }
+        });
+
+        pfContrasena.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                pfConfirmarContrasena.requestFocus();
+                event.consume();
+            }
+        });
+
+        pfConfirmarContrasena.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                btnRegistrarme.fire(); 
+                event.consume();
+            }
+        });
+        
+        txtContrasenaVisible.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                pfConfirmarContrasena.requestFocus(); 
+                event.consume();
+            }
+        });
+        
+        txtContrasenaVisible1.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                btnRegistrarme.fire();
+                event.consume();
+            }
+        });
     }
 
     @FXML
     private void agregarUsuario() {
         String usuario = txtUsuario.getText();
         String correo = txtCorreo.getText();
-        String contrasena = pfContrasena.getText();
+        String contrasena = pfContrasena.getText(); 
         String confirmarContrasena = pfConfirmarContrasena.getText();
         String role = "user";
 
@@ -95,7 +141,7 @@ public class registerController implements Initializable {
             alerta.setHeaderText(null);
             alerta.setContentText("Por favor, completa todos los campos para registrarte.");
             alerta.getDialogPane().getStylesheets().add(
-                    getClass().getResource("/view/registroview.css").toExternalForm());
+                getClass().getResource("/view/alertsStyle.css").toExternalForm()); 
             alerta.getDialogPane().getStyleClass().add("alert-warning");
             alerta.showAndWait();
             return;
@@ -107,7 +153,7 @@ public class registerController implements Initializable {
             alerta.setHeaderText(null);
             alerta.setContentText("Las contraseñas no coinciden. Por favor, inténtalo de nuevo.");
             alerta.getDialogPane().getStylesheets().add(
-                    getClass().getResource("/view/registroview.css").toExternalForm());
+                getClass().getResource("/view/alertsStyle.css").toExternalForm()); 
             alerta.getDialogPane().getStyleClass().add("alert-error");
             alerta.showAndWait();
             return;
@@ -119,7 +165,7 @@ public class registerController implements Initializable {
             alerta.setHeaderText(null);
             alerta.setContentText("El nombre de usuario '" + usuario + "' ya está en uso. Por favor, elige otro.");
             alerta.getDialogPane().getStylesheets().add(
-                    getClass().getResource("/view/registroview.css").toExternalForm());
+                getClass().getResource("/view/alertsStyle.css").toExternalForm()); 
             alerta.getDialogPane().getStyleClass().add("alert-error");
             alerta.showAndWait();
             return;
@@ -131,7 +177,7 @@ public class registerController implements Initializable {
             alerta.setHeaderText(null);
             alerta.setContentText("La dirección de correo electrónico '" + correo + "' ya está registrada.");
             alerta.getDialogPane().getStylesheets().add(
-                    getClass().getResource("/view/registroview.css").toExternalForm());
+                getClass().getResource("/view/alertsStyle.css").toExternalForm()); 
             alerta.getDialogPane().getStyleClass().add("alert-error");
             alerta.showAndWait();
             return;
@@ -154,7 +200,7 @@ public class registerController implements Initializable {
                 alert.setHeaderText(null);
                 alert.setContentText("Usuario '" + usuario + "' registrado correctamente");
                 alert.getDialogPane().getStylesheets().add(
-                        getClass().getResource("/view/registroview.css").toExternalForm());
+                    getClass().getResource("/view/alertsStyle.css").toExternalForm()); 
                 alert.getDialogPane().getStyleClass().add("alert-information");
                 alert.showAndWait();
                 limpiarCampos();
@@ -165,7 +211,7 @@ public class registerController implements Initializable {
                 alert.setHeaderText(null);
                 alert.setContentText("No se pudo registrar el usuario");
                 alert.getDialogPane().getStylesheets().add(
-                        getClass().getResource("/view/registroview.css").toExternalForm());
+                    getClass().getResource("/view/alertsStyle.css").toExternalForm()); 
                 alert.getDialogPane().getStyleClass().add("alert-error");
                 alert.showAndWait();
             }
@@ -177,7 +223,7 @@ public class registerController implements Initializable {
             alert.setHeaderText(null);
             alert.setContentText("Ocurrió un error al registrar el usuario." + e.getMessage());
             alert.getDialogPane().getStylesheets().add(
-                    getClass().getResource("/view/registroview.css").toExternalForm());
+                    getClass().getResource("/view/alertsStyle.css").toExternalForm()); 
             alert.getDialogPane().getStyleClass().add("alert-error");
             alert.showAndWait();
         }
