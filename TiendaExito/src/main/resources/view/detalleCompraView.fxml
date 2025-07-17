@@ -73,6 +73,8 @@
                <TextField prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
                <ComboBox prefHeight="25.0" prefWidth="192.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                <ComboBox prefHeight="25.0" prefWidth="185.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               <TextField prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+               <Button onAction="#escenaPaginaInicio" prefHeight="36.0" prefWidth="71.0" styleClass="boton-menu" stylesheets="@productosview.css" text="Buscar" GridPane.columnIndex="3" GridPane.rowIndex="2" />
             </children>
          </GridPane>
 

@@ -75,7 +75,7 @@
                <ComboBox prefHeight="25.0" prefWidth="184.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                <DatePicker prefHeight="25.0" prefWidth="222.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                <TextField prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-               <Button onAction="#escenaPaginaInicio" prefHeight="32.0" prefWidth="182.0" styleClass="boton-menu" stylesheets="@productosview.css" text="BUSCAR" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+               <Button onAction="#escenaPaginaInicio" prefHeight="32.0" prefWidth="71.0" styleClass="boton-menu" stylesheets="@productosview.css" text="Buscar" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2" />
             </children>
          </GridPane>
 
