@@ -1,6 +1,5 @@
 /* Fondo general con imagen */
 .root {
-    -fx-background-image: url("fondo-madera.jpg"); /* Cambia el nombre según tu imagen */
     -fx-background-size: cover;
     -fx-background-position: center center;
 }
@@ -24,18 +23,43 @@
 }
 
 /* Botones del menú */
-.boton-menu {
-    -fx-background-color: transparent; 
-    -fx-border-color: transparent;     
-    -fx-text-fill: #444;               
-    -fx-font-size: 15px;               
-    -fx-font-weight: bold;            
-    -fx-padding: 5px 10px;            
-    -fx-cursor: hand;                
-    -fx-alignment: center;             
-    -fx-effect: null;                
-    -fx-background-radius: 0;         
+.menu-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 5px;
+    -fx-border-color: #e0e0e0; /* Un borde más suave */
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-text-fill: #333; /* Color de texto más oscuro */
+    -fx-font-family: "Arial", sans-serif; /* Fuente más común */
+    -fx-font-size: 14px;
+    -fx-font-weight: 600; /* Un poco más de peso */
+    -fx-padding: 8px 15px; /* Más padding para un mejor espacio */
+    -fx-cursor: hand;
+    -fx-alignment: CENTER_LEFT;
 }
+
+.menu-button:hover {
+    -fx-background-color: #f0f0f0; /* Color de fondo al pasar el ratón */
+}
+
+.menu-button:pressed {
+    -fx-background-color: #e0e0e0; /* Color de fondo al hacer clic */
+    -fx-border-color: #ccc;
+}
+
+.menu-button .label {
+    -fx-text-fill: inherit; /* Hereda el color del texto */
+}
+
+.menu-button .arrow-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.menu-button .arrow {
+    -fx-background-color: #333; /* Color de la flecha */
+}
+
 
 /* Efecto al pasar el ratón por encima (hover) */
 .boton-menu:hover {

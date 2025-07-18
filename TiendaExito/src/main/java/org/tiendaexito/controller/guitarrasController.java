@@ -10,7 +10,7 @@ import org.tiendaexito.system.Main;
  *
  * @author Lendrock
  */
-public class inicioUserController implements Initializable{
+public class guitarrasController implements Initializable{
     
     private Main principal;
     
@@ -23,8 +23,8 @@ public class inicioUserController implements Initializable{
         this.principal = principal;
     }
     
-    public void escenaGuitarras(){
-        principal.escenaGuitarras();
+    public void escenaPaginaInicioUser(){
+        principal.escenaInicioUser();
     }
     
     public void escenaBaterias(){

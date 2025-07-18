@@ -8,13 +8,17 @@ import javafx.fxml.Initializable;
 import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.tiendaexito.controller.bajosController;
+import org.tiendaexito.controller.bateriasController;
 import org.tiendaexito.controller.comprasController;
 import org.tiendaexito.controller.detalleCompraController;
+import org.tiendaexito.controller.guitarrasController;
 import org.tiendaexito.controller.inicioController; 
 import org.tiendaexito.controller.inicioUserController;
 import org.tiendaexito.controller.loginController;
 import org.tiendaexito.controller.productosController;
 import org.tiendaexito.controller.registerController;
+import org.tiendaexito.controller.tecladosController;
 
 /**
  *
@@ -115,7 +119,42 @@ public class Main extends Application {
             ex.printStackTrace();
         }
     }
-
+    public void escenaGuitarras() {
+        try {
+            guitarrasController gc = (guitarrasController) cambiarEscena("GuitarrasView.fxml", 898.6, 643);
+            gc.setPrincipal(this);
+        } catch (IOException ex) {
+            System.out.println("Error al cambio a GuitarrasView");
+            ex.printStackTrace();
+        }
+    }
+    public void escenaTeclados() {
+        try {
+            tecladosController tc = (tecladosController) cambiarEscena("TecladosView.fxml", 898.6, 643);
+            tc.setPrincipal(this);
+        } catch (IOException ex) {
+            System.out.println("Error al cambio a TecladosView");
+            ex.printStackTrace();
+        }
+    }
+    public void escenaBajos() {
+        try {
+            bajosController bc = (bajosController) cambiarEscena("BajosView.fxml", 898.6, 643);
+            bc.setPrincipal(this);
+        } catch (IOException ex) {
+            System.out.println("Error al cambio a BajosView");
+            ex.printStackTrace();
+        }
+    }
+    public void escenaBaterias() {
+        try {
+            bateriasController bac = (bateriasController) cambiarEscena("BateriasView.fxml", 898.6, 643);
+            bac.setPrincipal(this);
+        } catch (IOException ex) {
+            System.out.println("Error al cambio a BateriasView");
+            ex.printStackTrace();
+        }
+    }
     public static void main(String[] args) {
         launch(args);
     }

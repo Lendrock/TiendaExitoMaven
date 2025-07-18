@@ -1,6 +1,5 @@
 /* Fondo general con imagen */
 .root {
-    -fx-background-image: url("fondo-madera.jpg"); /* Cambia el nombre según tu imagen */
     -fx-background-size: cover;
     -fx-background-position: center center;
 }

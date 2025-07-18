@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane id="AnchorPane" prefHeight="608.0" prefWidth="888.0" stylesheets="@tecladosview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="608.0" prefWidth="888.0" stylesheets="@tecladosview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tiendaexito.controller.tecladosController">
    <children>
       <AnchorPane id="AnchorPane" layoutX="201.0" prefHeight="642.0" prefWidth="697.0" styleClass="fondo-cafe-claro">
          <stylesheets>
@@ -58,7 +58,7 @@
                   <TextField prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="4" />
                   <TextField prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
                   <TextField prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                  <Button onAction="#escenaPaginaInicio" prefHeight="32.0" prefWidth="72.0" styleClass="boton-menu" stylesheets="@productosview.css" text="BUSCAR" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Button prefHeight="32.0" prefWidth="72.0" styleClass="boton-menu" stylesheets="@productosview.css" text="BUSCAR" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2" />
                   <TextField prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <TextField prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                </children>
@@ -78,10 +78,10 @@
          </children>
       </AnchorPane>
       <Label layoutX="200.0" layoutY="-1.0" prefHeight="644.0" prefWidth="2.0" styleClass="fondo-negro" />
-      <Button layoutX="10.0" layoutY="25.0" onAction="#escenaPaginaInicio" prefHeight="32.0" prefWidth="182.0" styleClass="boton-menu" stylesheets="@productosview.css" text="REGRESAR" />
-      <Button layoutX="10.0" layoutY="82.0" onAction="#escenaPaginaInicio" prefHeight="32.0" prefWidth="182.0" styleClass="boton-menu" stylesheets="@productosview.css" text="BATERIAS" />
-      <Button layoutX="10.0" layoutY="123.0" onAction="#escenaPaginaInicio" prefHeight="32.0" prefWidth="182.0" styleClass="boton-menu" stylesheets="@productosview.css" text="BAJOS" />
-      <Button layoutX="10.0" layoutY="165.0" onAction="#escenaPaginaInicio" prefHeight="32.0" prefWidth="182.0" styleClass="boton-menu" stylesheets="@productosview.css" text="GUITARRAS" />
+      <Button layoutX="10.0" layoutY="25.0" onAction="#escenaPaginaInicioUser" prefHeight="32.0" prefWidth="182.0" styleClass="boton-menu" stylesheets="@productosview.css" text="REGRESAR" />
+      <Button layoutX="10.0" layoutY="82.0" onAction="#escenaBaterias" prefHeight="32.0" prefWidth="182.0" styleClass="boton-menu" stylesheets="@productosview.css" text="BATERIAS" />
+      <Button layoutX="10.0" layoutY="123.0" onAction="#escenaBajos" prefHeight="32.0" prefWidth="182.0" styleClass="boton-menu" stylesheets="@productosview.css" text="BAJOS" />
+      <Button layoutX="10.0" layoutY="165.0" onAction="#escenaGuitarras" prefHeight="32.0" prefWidth="182.0" styleClass="boton-menu" stylesheets="@productosview.css" text="GUITARRAS" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="26.0" layoutY="472.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/ChatGPT%20Image%2014%20jul%202025,%2008_31_47%20p.m..png" />
