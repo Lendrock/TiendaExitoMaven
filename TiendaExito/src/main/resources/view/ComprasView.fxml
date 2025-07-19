@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="500.0" prefWidth="950.0" stylesheets="@comprasview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tiendaexito.controller.comprasController">
+
+    <left>
+        <VBox alignment="TOP_CENTER" prefWidth="111.0" spacing="15" styleClass="root1" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="20" left="10" right="10" top="20" />
+            </padding>
+            <Button fx:id="btnNuevo" onAction="#agregarCompra" prefHeight="30.0" prefWidth="83.0" styleClass="boton-menu" text="NUEVO" />
+            <Button fx:id="btnEditar" onAction="#editarCompra" prefHeight="30.0" prefWidth="84.0" styleClass="boton-menu" text="EDITAR" />
+            <Button fx:id="btnEliminar" onAction="#cancelarCompra" prefHeight="32.0" prefWidth="83.0" styleClass="boton-menu" text="ELIMINAR" />
+            <Button onAction="#escenaPaginaInicio" prefHeight="32.0" prefWidth="80.0" styleClass="boton-menu" stylesheets="@productosview.css" text="REGRESAR" />
+        </VBox>
+    </left>
+
+    <center>
+        <VBox alignment="TOP_CENTER" prefHeight="576.0" prefWidth="681.0" spacing="15" styleClass="root" stylesheets="@productosview.css" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+
+            <Label styleClass="titulo" text="Compras" />
+
+            <TableView fx:id="tablaCompras" prefHeight="200" prefWidth="600" styleClass="tabla-compras">
+                <columns>
+                    <TableColumn fx:id="colIdCompra" prefWidth="42.399993896484375" text="ID" />
+                    <TableColumn fx:id="colIdUser" prefWidth="68.79993057250977" text="IdUser" />
+                    <TableColumn fx:id="colFecha" prefWidth="181.60003662109375" text="Fecha" />
+                    <TableColumn fx:id="colTotal" prefWidth="158.4000244140625" text="Total" />
+               <TableColumn fx:id="colMetodoPago" prefWidth="180.79998779296875" text="Metodo Pago" />
+               <TableColumn fx:id="colEstado" prefWidth="164.79997558593755" text="Estado" />
+                </columns>
+            </TableView>
+         <GridPane prefHeight="163.0" prefWidth="649.0">
+           <columnConstraints>
+             <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.0" minWidth="10.0" prefWidth="92.0" />
+               <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="221.0" minWidth="10.0" prefWidth="182.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.0" minWidth="10.0" prefWidth="95.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="209.0" minWidth="10.0" prefWidth="92.0" />
+             <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="192.0" minWidth="10.0" prefWidth="184.0" />
+           </columnConstraints>
+           <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+             <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+             <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+             <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+           </rowConstraints>
+            <children>
+               <Label text="ID" textAlignment="RIGHT" />
+               <Label text="IDUSER" textAlignment="RIGHT" GridPane.rowIndex="1" />
+               <Label text="FECHA" textAlignment="RIGHT" GridPane.rowIndex="2" />
+               <Label text="TOTAL" textAlignment="RIGHT" GridPane.rowIndex="3" />
+               <Label prefHeight="12.0" prefWidth="99.0" text="METODOPAGO" textAlignment="RIGHT" GridPane.columnIndex="3" />
+               <Label text="ESTADO" textAlignment="RIGHT" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+               <TextField fx:id="txtIdCompra" disable="true" prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="1" />
+               <TextField fx:id="txtTotal" disable="true" prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               <TextField fx:id="txtMetodoPago" disable="true" prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="4" />
+               <TextField fx:id="txtEstado" disable="true" prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+               <ComboBox fx:id="cbIdUser" disable="true" prefHeight="25.0" prefWidth="184.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               <DatePicker fx:id="dpFecha" disable="true" prefHeight="25.0" prefWidth="222.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               <TextField fx:id="txtBuscar" prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+               <Button fx:id="btnBuscar" onAction="#buscarCompra" prefHeight="32.0" prefWidth="71.0" styleClass="boton-menu" stylesheets="@productosview.css" text="Buscar" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            </children>
+         </GridPane>
+
+            <HBox alignment="CENTER" spacing="20" />
+         <HBox alignment="CENTER" spacing="20" />
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" maxHeight="600.0" prefHeight="600.0" prefWidth="899.0" styleClass="fondo-cafe-oscuro" stylesheets="@tecladosview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tiendaexito.controller.tecladosController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="201.0" prefHeight="600.0" prefWidth="697.0" styleClass="fondo-cafe-claro" stylesheets="@tecladosview.css">
+         <children>
+            <Label layoutX="223.0" layoutY="7.0" styleClass="titulo-guitarras" text="TECLADOS" />
+            <TableView fx:id="tablaProductos" layoutX="23.0" layoutY="89.0" prefHeight="200" prefWidth="651.0" styleClass="tabla-teclados">
+               <columns>
+                  <TableColumn fx:id="colIdProducto" prefWidth="36.0" text="ID" />
+                  <TableColumn fx:id="colNombre" prefWidth="162.39996337890625" text="Nombre" />
+                  <TableColumn fx:id="colDescripcion" prefWidth="270.4000549316406" text="Descripcion" />
+                  <TableColumn fx:id="colPrecio" prefWidth="55.20001220703125" text="Precio" />
+                  <TableColumn fx:id="colStock" prefWidth="39.9998779296875" text="Stock" />
+                  <TableColumn fx:id="colCategoria" prefWidth="93.60009765625" text="Categorias" />
+               </columns>
+            </TableView>
+            <GridPane layoutX="20.0" layoutY="321.0" prefHeight="163.0" prefWidth="649.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.0" minWidth="10.0" prefWidth="92.0" />
+                  <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="221.0" minWidth="10.0" prefWidth="182.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.0" minWidth="10.0" prefWidth="95.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="209.0" minWidth="10.0" prefWidth="92.0" />
+                  <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="192.0" minWidth="10.0" prefWidth="184.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="ID" textAlignment="RIGHT" />
+                  <Label text="Nombre" textAlignment="RIGHT" GridPane.rowIndex="1" />
+                  <Label text="Descripcion" textAlignment="RIGHT" GridPane.rowIndex="2" />
+                  <Label text="Precio" textAlignment="RIGHT" GridPane.rowIndex="3" />
+                  <Label prefHeight="12.0" prefWidth="99.0" text="Stock" textAlignment="RIGHT" GridPane.columnIndex="3" />
+                  <Label text="Categorias" textAlignment="RIGHT" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtIdProducto" disable="true" prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="txtPrecio" disable="true" prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="txtStock" disable="true" prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="4" />
+                  <TextField fx:id="txtCategoria" disable="true" prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtBuscar" prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <Button fx:id="btnBuscar" onAction="#buscarProductoUser" prefHeight="32.0" prefWidth="69.0" styleClass="boton-menu" stylesheets="@productosview.css" text="BUSCAR" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtDescripcion" disable="true" prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtNombre" disable="true" prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <Button fx:id="btnSiguiente" layoutX="380.0" layoutY="524.0" onAction="#mostrarSiguiente" prefHeight="25.0" prefWidth="118.0" styleClass="boton-menu" text="Siguiente" />
+            <Button fx:id="btnAnterior" layoutX="237.0" layoutY="524.0" onAction="#mostrarAnterior" prefHeight="25.0" prefWidth="118.0" styleClass="boton-menu" text="Anterior" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="200.0" layoutY="-1.0" prefHeight="600.0" prefWidth="2.0" styleClass="fondo-negro" />
+      <Button layoutX="10.0" layoutY="25.0" onAction="#escenaPaginaInicioUser" prefHeight="32.0" prefWidth="182.0" styleClass="boton-menu" stylesheets="@productosview.css" text="REGRESAR" />
+      <Button layoutX="10.0" layoutY="82.0" onAction="#escenaBaterias" prefHeight="32.0" prefWidth="182.0" styleClass="boton-menu" stylesheets="@productosview.css" text="BATERIAS" />
+      <Button layoutX="10.0" layoutY="123.0" onAction="#escenaBajos" prefHeight="32.0" prefWidth="182.0" styleClass="boton-menu" stylesheets="@productosview.css" text="BAJOS" />
+      <Button layoutX="10.0" layoutY="165.0" onAction="#escenaGuitarras" prefHeight="32.0" prefWidth="182.0" styleClass="boton-menu" stylesheets="@productosview.css" text="TECLADOS" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="26.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/ChatGPT%20Image%2014%20jul%202025,%2008_31_47%20p.m..png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
