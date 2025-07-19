@@ -1,14 +1,13 @@
-
 .root {
     -fx-background-color: #e3c9a1;
 }
 
 .root1 {
-    -fx-background-color: black; 
+    -fx-background-color: black;
 }
 
 .panel-lateral {
-    -fx-background-color: #000000; 
+    -fx-background-color: #000000;
 }
 
 .boton-menu {
@@ -27,92 +26,136 @@
 }
 
 .tabla-productos {
-    -fx-background-color: transparent; 
-    -fx-border-color: #c4a484;   
-    -fx-border-width: 1px;       
-    -fx-border-radius: 5px;      
+    -fx-background-color: #f8f8f8;
+    -fx-border-color: #c4a484;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0.2, 0, 2);
-    -fx-padding: 0;             
-    -fx-base: #f8f8f8;          
+    -fx-padding: 0;
+    -fx-base: #f8f8f8;
 }
 
 .tabla-productos .scroll-pane {
-    -fx-background-color: #f8f8f8; 
+    -fx-background-color: transparent;
     -fx-background-insets: 0;
     -fx-padding: 0;
 }
 
 .tabla-productos .scroll-pane .viewport {
-    -fx-background-color: #f8f8f8; 
+    -fx-background-color: #f8f8f8;
 }
 
 .tabla-productos .scroll-pane .content {
-    -fx-background-color: #f8f8f8; 
+    -fx-background-color: #f8f8f8;
+}
+
+.tabla-productos .scroll-bar:horizontal,
+.tabla-productos .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-opacity: 1;
+}
+
+.tabla-productos .scroll-bar:horizontal .track,
+.tabla-productos .scroll-bar:vertical .track {
+    -fx-background-color: #e0d5c8;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0;
+    -fx-padding: 2;
+}
+
+.tabla-productos .scroll-bar:horizontal .thumb,
+.tabla-productos .scroll-bar:vertical .thumb {
+    -fx-background-color: #c79d6c;
+    -fx-background-insets: 0;
+    -fx-background-radius: 5;
+}
+
+.tabla-productos .scroll-bar:horizontal .increment-button,
+.tabla-productos .scroll-bar:horizontal .decrement-button,
+.tabla-productos .scroll-bar:vertical .increment-button,
+.tabla-productos .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-padding: 0;
+}
+
+.tabla-productos .scroll-bar:horizontal .increment-arrow,
+.tabla-productos .scroll-bar:horizontal .decrement-arrow,
+.tabla-productos .scroll-bar:vertical .increment-arrow,
+.tabla-productos .scroll-bar:vertical .decrement-arrow {
+    -fx-shape: " ";
+    -fx-padding: 0;
 }
 
 .tabla-productos .column-header-background {
-    -fx-background-color: linear-gradient(to bottom, #d8b38d, #c79d6c); 
-    -fx-background-radius: 5px 5px 0 0; 
-    -fx-padding: 5px 0; 
+    -fx-background-color: linear-gradient(to bottom, #d8b38d, #c79d6c);
+    -fx-background-radius: 5px 5px 0 0;
+    -fx-padding: 5px 0;
+    -fx-border-insets: 0;
 }
-/* Encabezado de CADA COLUMNA individualmente */
+
 .tabla-productos .column-header {
-    -fx-background-color: transparent; 
+    -fx-background-color: transparent;
 }
 
 .tabla-productos .column-header .label {
-    -fx-text-fill: #4a382d;       
-    -fx-font-weight: bold;       
-    -fx-font-size: 13px;          
-    -fx-alignment: center;        
+    -fx-text-fill: #4a382d;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-alignment: center;
 }
+
 .tabla-productos .table-cell {
-    -fx-background-color: transparent; 
-    -fx-border-color: #e0d5c8;    
-    -fx-border-width: 0 0 1px 0;  
-    -fx-padding: 8px 10px;       
-    -fx-alignment: center-left;   
-    -fx-text-fill: #333333;       
-    -fx-font-size: 13px;        
-    -fx-table-cell-border-color: #e0d5c8; 
+    -fx-background-color: transparent;
+    -fx-border-color: #e0d5c8;
+    -fx-border-width: 0 0 1px 0;
+    -fx-padding: 8px 10px;
+    -fx-alignment: center-left;
+    -fx-text-fill: #333333;
+    -fx-font-size: 13px;
+    -fx-table-cell-border-color: #e0d5c8;
+    -fx-background-insets: 0;
 }
+
 .tabla-productos .table-row-cell {
-    -fx-background-color: white; 
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-cell-size: 35px;
 }
 .tabla-productos .table-row-cell:odd {
     -fx-background-color: #f5f5f5;
 }
 .tabla-productos .table-row-cell:even {
-    -fx-background-color: white; 
+    -fx-background-color: white;
 }
 
 .tabla-productos .table-row-cell:selected {
-    -fx-background-color: #c7a47e; 
+    -fx-background-color: #c7a47e;
 }
 .tabla-productos .table-row-cell:selected .table-cell {
-    -fx-text-fill: white; 
+    -fx-text-fill: white;
 }
 .tabla-productos .table-row-cell:hover {
-    -fx-background-color: #f0e6da; 
+    -fx-background-color: #f0e6da;
 }
 
-.text-field { 
-    -fx-background-color: #ffffff; 
-    -fx-border-color: #a17454;     
-    -fx-border-width: 1px;         
-    -fx-border-radius: 5px;        
-    -fx-padding: 8px 10px;         
-    -fx-font-size: 14px;           
-    -fx-text-fill: #333333;       
-    -fx-highlight-fill: #c79d6c;   
-    -fx-highlight-text-fill: white; 
-    -fx-prompt-text-fill: #888888; 
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 3, 0.1, 0, 1); 
+.text-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #a17454;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 8px 10px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+    -fx-highlight-fill: #c79d6c;
+    -fx-highlight-text-fill: white;
+    -fx-prompt-text-fill: #888888;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 3, 0.1, 0, 1);
 }
 
 .text-field:focused {
-    -fx-border-color: #7b4f3d;    
-    -fx-effect: dropshadow(gaussian, rgba(123, 79, 61, 0.3), 5, 0.4, 0, 0); 
+    -fx-border-color: #7b4f3d;
+    -fx-effect: dropshadow(gaussian, rgba(123, 79, 61, 0.3), 5, 0.4, 0, 0);
 }
 
 .botones-accion .button {

@@ -67,7 +67,7 @@ public class Main extends Application {
     }
     public void escenaCompras() {
         try {
-            comprasController cm = (comprasController) cambiarEscena("ComprasView.fxml", 800, 600);
+            comprasController cm = (comprasController) cambiarEscena("ComprasView.fxml", 950, 500);
             cm.setPrincipal(this);
         } catch (IOException ex) {
             System.out.println("Error al cambio a comprasView");
@@ -76,7 +76,7 @@ public class Main extends Application {
     }//
     public void escenaProductos() {
         try {
-            productosController pc = (productosController) cambiarEscena("ProductosView.fxml", 800, 600);
+            productosController pc = (productosController) cambiarEscena("ProductosView.fxml", 950, 500);
             pc.setPrincipal(this);
         } catch (IOException ex) {
             System.out.println("Error al cambio a productosView");
@@ -85,7 +85,7 @@ public class Main extends Application {
     }
     public void escenaDetalleCompra() {
         try {
-            detalleCompraController dcc = (detalleCompraController) cambiarEscena("detalleCompraView.fxml", 800, 600);
+            detalleCompraController dcc = (detalleCompraController) cambiarEscena("detalleCompraView.fxml", 950, 500);
             dcc.setPrincipal(this);
         } catch (IOException ex) {
             System.out.println("Error al cambio a detalleCompraView");

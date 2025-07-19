@@ -27,75 +27,118 @@
 }
 
 .tabla-detalleCompra {
-    -fx-background-color: transparent; 
-    -fx-border-color: #c4a484;   
-    -fx-border-width: 1px;       
-    -fx-border-radius: 5px;      
+    -fx-background-color: #f8f8f8;
+    -fx-border-color: #c4a484;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0.2, 0, 2);
-    -fx-padding: 0;             
-    -fx-base: #f8f8f8;          
+    -fx-padding: 0;
+    -fx-base: #f8f8f8;
 }
 
 .tabla-detalleCompra .scroll-pane {
-    -fx-background-color: #f8f8f8; 
+    -fx-background-color: transparent;
     -fx-background-insets: 0;
     -fx-padding: 0;
 }
 
 .tabla-detalleCompra .scroll-pane .viewport {
-    -fx-background-color: #f8f8f8; 
+    -fx-background-color: #f8f8f8;
 }
 
 .tabla-detalleCompra .scroll-pane .content {
-    -fx-background-color: #f8f8f8; 
+    -fx-background-color: #f8f8f8;
+}
+
+.tabla-detalleCompra .scroll-bar:horizontal,
+.tabla-detalleCompra .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-opacity: 1;
+}
+
+.tabla-detalleCompra .scroll-bar:horizontal .track,
+.tabla-detalleCompra .scroll-bar:vertical .track {
+    -fx-background-color: #e0d5c8;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0;
+    -fx-padding: 2;
+}
+
+.tabla-detalleCompra .scroll-bar:horizontal .thumb,
+.tabla-detalleCompra .scroll-bar:vertical .thumb {
+    -fx-background-color: #c79d6c;
+    -fx-background-insets: 0;
+    -fx-background-radius: 5;
+}
+
+.tabla-detalleCompra .scroll-bar:horizontal .increment-button,
+.tabla-detalleCompra .scroll-bar:horizontal .decrement-button,
+.tabla-detalleCompra .scroll-bar:vertical .increment-button,
+.tabla-detalleCompra .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-padding: 0;
+}
+
+.tabla-detalleCompra .scroll-bar:horizontal .increment-arrow,
+.tabla-detalleCompra .scroll-bar:horizontal .decrement-arrow,
+.tabla-detalleCompra .scroll-bar:vertical .increment-arrow,
+.tabla-detalleCompra .scroll-bar:vertical .decrement-arrow {
+    -fx-shape: " ";
+    -fx-padding: 0;
 }
 
 .tabla-detalleCompra .column-header-background {
-    -fx-background-color: linear-gradient(to bottom, #d8b38d, #c79d6c); 
-    -fx-background-radius: 5px 5px 0 0; 
-    -fx-padding: 5px 0; 
+    -fx-background-color: linear-gradient(to bottom, #d8b38d, #c79d6c);
+    -fx-background-radius: 5px 5px 0 0;
+    -fx-padding: 5px 0;
+    -fx-border-insets: 0;
 }
-/* Encabezado de CADA COLUMNA individualmente */
+
 .tabla-detalleCompra .column-header {
-    -fx-background-color: transparent; 
+    -fx-background-color: transparent;
 }
 
 .tabla-detalleCompra .column-header .label {
-    -fx-text-fill: #4a382d;       
-    -fx-font-weight: bold;       
-    -fx-font-size: 13px;          
-    -fx-alignment: center;        
+    -fx-text-fill: #4a382d;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-alignment: center;
 }
+
 .tabla-detalleCompra .table-cell {
-    -fx-background-color: transparent; 
-    -fx-border-color: #e0d5c8;    
-    -fx-border-width: 0 0 1px 0;  
-    -fx-padding: 8px 10px;       
-    -fx-alignment: center-left;   
-    -fx-text-fill: #333333;       
-    -fx-font-size: 13px;        
-    -fx-table-cell-border-color: #e0d5c8; 
+    -fx-background-color: transparent;
+    -fx-border-color: #e0d5c8;
+    -fx-border-width: 0 0 1px 0;
+    -fx-padding: 8px 10px;
+    -fx-alignment: center;
+    -fx-text-fill: #333333;
+    -fx-font-size: 13px;
+    -fx-table-cell-border-color: #e0d5c8;
+    -fx-background-insets: 0;
 }
+
 .tabla-detalleCompra .table-row-cell {
-    -fx-background-color: white; 
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-cell-size: 35px;
 }
 .tabla-detalleCompra .table-row-cell:odd {
     -fx-background-color: #f5f5f5;
 }
 .tabla-detalleCompra .table-row-cell:even {
-    -fx-background-color: white; 
+    -fx-background-color: white;
 }
 
 .tabla-detalleCompra .table-row-cell:selected {
-    -fx-background-color: #c7a47e; 
+    -fx-background-color: #c7a47e;
 }
 .tabla-detalleCompra .table-row-cell:selected .table-cell {
-    -fx-text-fill: white; 
+    -fx-text-fill: white;
 }
 .tabla-detalleCompra .table-row-cell:hover {
-    -fx-background-color: #f0e6da; 
+    -fx-background-color: #f0e6da;
 }
-
 .text-field { 
     -fx-background-color: #ffffff; 
     -fx-border-color: #a17454;     
