@@ -8,12 +8,14 @@ import javafx.fxml.Initializable;
 import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.scene.image.Image; // Import the Image class
+
 import org.tiendaexito.controller.bajosController;
 import org.tiendaexito.controller.bateriasController;
 import org.tiendaexito.controller.comprasController;
 import org.tiendaexito.controller.detalleCompraController;
 import org.tiendaexito.controller.guitarrasController;
-import org.tiendaexito.controller.inicioController; 
+import org.tiendaexito.controller.inicioController;
 import org.tiendaexito.controller.inicioUserController;
 import org.tiendaexito.controller.loginController;
 import org.tiendaexito.controller.productosController;
@@ -33,8 +35,15 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         this.escenarioPrincipal = stage;
 
-        escenaLogin(); 
-        stage.setTitle("Tienda El Exito"); 
+        try {
+            Image icon = new Image(getClass().getResourceAsStream("/image/nota.png"));
+            this.escenarioPrincipal.getIcons().add(icon);
+        } catch (Exception e) {
+            System.err.println("Error al cargar el icono: " + e.getMessage());
+            e.printStackTrace();
+        }
+        escenaLogin();
+        stage.setTitle("Tienda El Exito");
         stage.show();
     }
 
@@ -49,7 +58,7 @@ public class Main extends Application {
 
         escena = new Scene(cargadorFXML.load(archivoFXML), ancho, alto);
         escenarioPrincipal.setScene(escena);
-        escenarioPrincipal.sizeToScene(); 
+        escenarioPrincipal.sizeToScene();
 
         interfazCargada = cargadorFXML.getController();
 
@@ -73,7 +82,7 @@ public class Main extends Application {
             System.out.println("Error al cambio a comprasView");
             ex.printStackTrace();
         }
-    }//
+    }
     public void escenaProductos() {
         try {
             productosController pc = (productosController) cambiarEscena("ProductosView.fxml", 950, 500);
@@ -121,7 +130,7 @@ public class Main extends Application {
     }
     public void escenaGuitarras() {
         try {
-            guitarrasController gc = (guitarrasController) cambiarEscena("GuitarrasView.fxml", 898.6, 643);
+            guitarrasController gc = (guitarrasController) cambiarEscena("GuitarrasView.fxml", 898.6, 600);
             gc.setPrincipal(this);
         } catch (IOException ex) {
             System.out.println("Error al cambio a GuitarrasView");
@@ -130,7 +139,7 @@ public class Main extends Application {
     }
     public void escenaTeclados() {
         try {
-            tecladosController tc = (tecladosController) cambiarEscena("TecladosView.fxml", 898.6, 643);
+            tecladosController tc = (tecladosController) cambiarEscena("TecladosView.fxml", 898.6, 600);
             tc.setPrincipal(this);
         } catch (IOException ex) {
             System.out.println("Error al cambio a TecladosView");
@@ -139,7 +148,7 @@ public class Main extends Application {
     }
     public void escenaBajos() {
         try {
-            bajosController bc = (bajosController) cambiarEscena("BajosView.fxml", 898.6, 643);
+            bajosController bc = (bajosController) cambiarEscena("BajosView.fxml", 898.6, 600);
             bc.setPrincipal(this);
         } catch (IOException ex) {
             System.out.println("Error al cambio a BajosView");
@@ -148,7 +157,7 @@ public class Main extends Application {
     }
     public void escenaBaterias() {
         try {
-            bateriasController bac = (bateriasController) cambiarEscena("BateriasView.fxml", 898.6, 643);
+            bateriasController bac = (bateriasController) cambiarEscena("BateriasView.fxml", 898.6, 600);
             bac.setPrincipal(this);
         } catch (IOException ex) {
             System.out.println("Error al cambio a BateriasView");

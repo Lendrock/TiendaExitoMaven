@@ -11,28 +11,27 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane id="AnchorPane" prefHeight="608.0" prefWidth="888.0" styleClass="fondo-cafe-oscuro" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tiendaexito.controller.guitarrasController">
+<AnchorPane id="AnchorPane" maxHeight="600.0" prefHeight="600.0" prefWidth="899.0" styleClass="fondo-cafe-oscuro" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tiendaexito.controller.guitarrasController">
     <stylesheets>
         <URL value="@guitarrasview.css" />
     </stylesheets>
    <children>
-      <AnchorPane id="AnchorPane" layoutX="201.0" prefHeight="644.0" prefWidth="697.0" styleClass="fondo-cafe-claro">
+      <AnchorPane id="AnchorPane" layoutX="201.0" prefHeight="600.0" prefWidth="697.0" styleClass="fondo-cafe-claro">
          <stylesheets>
             <URL value="@guitarrasview.css" />
          </stylesheets>
          <children>
             <Label layoutX="206.0" layoutY="8.0" styleClass="titulo-guitarras" text="GUITARRAS" />
-            <TableView layoutX="23.0" layoutY="89.0" prefHeight="200" prefWidth="651.0" styleClass="tabla-productos">
+            <TableView fx:id="tablaProductos" layoutX="23.0" layoutY="89.0" prefHeight="200" prefWidth="651.0" styleClass="tabla-guitarras">
                <columns>
-                  <TableColumn text="ID" />
-                  <TableColumn prefWidth="108.0" text="Nombre" />
-                  <TableColumn prefWidth="104.0" text="Descripcion" />
-                  <TableColumn prefWidth="116.0" text="Precio" />
-                  <TableColumn prefWidth="110.0" text="Stock" />
-                  <TableColumn prefWidth="130.0" text="Categorias" />
+                  <TableColumn fx:id="colIdProducto" prefWidth="36.0" text="ID" />
+                  <TableColumn fx:id="colNombre" prefWidth="162.39996337890625" text="Nombre" />
+                  <TableColumn fx:id="colDescripcion" prefWidth="270.4000549316406" text="Descripcion" />
+                  <TableColumn fx:id="colPrecio" prefWidth="55.20001220703125" text="Precio" />
+                  <TableColumn fx:id="colStock" prefWidth="39.9998779296875" text="Stock" />
+                  <TableColumn fx:id="colCategoria" prefWidth="93.60009765625" text="Categorias" />
                </columns>
             </TableView>
             <GridPane layoutX="20.0" layoutY="321.0" prefHeight="163.0" prefWidth="649.0">
@@ -56,32 +55,26 @@
                   <Label text="Precio" textAlignment="RIGHT" GridPane.rowIndex="3" />
                   <Label prefHeight="12.0" prefWidth="99.0" text="Stock" textAlignment="RIGHT" GridPane.columnIndex="3" />
                   <Label text="Categorias" textAlignment="RIGHT" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                  <TextField prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="1" />
-                  <TextField prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <TextField prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="4" />
-                  <TextField prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                  <TextField prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                  <Button prefHeight="32.0" prefWidth="69.0" styleClass="boton-menu" stylesheets="@productosview.css" text="BUSCAR" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                  <TextField prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtIdProducto" disable="true" prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="txtPrecio" disable="true" prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="txtStock" disable="true" prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="4" />
+                  <TextField fx:id="txtCategoria" disable="true" prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtBuscar" prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <Button fx:id="btnBuscar" onAction="#buscarProductoUser" prefHeight="32.0" prefWidth="69.0" styleClass="boton-menu" stylesheets="@productosview.css" text="BUSCAR" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtDescripcion" disable="true" prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtNombre" disable="true" prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                </children>
             </GridPane>
-            <HBox alignment="CENTER" layoutX="241.0" layoutY="535.0" spacing="20">
-               <children>
-                  <Button styleClass="boton-menu" stylesheets="@productosview.css" text="Agregar al Carrito" />
-                  <Button prefWidth="114.0" styleClass="boton-menu" text="Cancelar" />
-               </children>
-            </HBox>
-            <Button layoutX="241.0" layoutY="573.0" prefHeight="25.0" prefWidth="118.0" styleClass="boton-menu" text="Siguiente" />
-            <Button layoutX="375.0" layoutY="573.0" prefHeight="25.0" prefWidth="118.0" styleClass="boton-menu" text="Anterior" />
+            <Button fx:id="btnSiguiente" layoutX="380.0" layoutY="524.0" onAction="#mostrarSiguiente" prefHeight="25.0" prefWidth="118.0" styleClass="boton-menu" text="Siguiente" />
+            <Button fx:id="btnAnterior" layoutX="237.0" layoutY="524.0" onAction="#mostrarAnterior" prefHeight="25.0" prefWidth="118.0" styleClass="boton-menu" text="Anterior" />
          </children>
       </AnchorPane>
-      <Label layoutX="200.0" layoutY="-1.0" prefHeight="644.0" prefWidth="2.0" styleClass="fondo-negro" />
+      <Label layoutX="200.0" layoutY="-1.0" prefHeight="600.0" prefWidth="2.0" styleClass="fondo-negro" />
       <Button layoutX="10.0" layoutY="25.0" onAction="#escenaPaginaInicioUser" prefHeight="32.0" prefWidth="182.0" styleClass="boton-menu" stylesheets="@productosview.css" text="REGRESAR" />
       <Button layoutX="10.0" layoutY="82.0" onAction="#escenaBaterias" prefHeight="32.0" prefWidth="182.0" styleClass="boton-menu" stylesheets="@productosview.css" text="BATERIAS" />
       <Button layoutX="10.0" layoutY="123.0" onAction="#escenaBajos" prefHeight="32.0" prefWidth="182.0" styleClass="boton-menu" stylesheets="@productosview.css" text="BAJOS" />
       <Button layoutX="10.0" layoutY="165.0" onAction="#escenaTeclados" prefHeight="32.0" prefWidth="182.0" styleClass="boton-menu" stylesheets="@productosview.css" text="TECLADOS" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="26.0" layoutY="472.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="26.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/ChatGPT%20Image%2014%20jul%202025,%2008_31_47%20p.m..png" />
          </image>

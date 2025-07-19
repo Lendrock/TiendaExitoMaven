@@ -1,3 +1,55 @@
+.fondo-cafe-claro {
+    -fx-background-color: #D7CCC8; /* Café claro */
+    -fx-effect: innershadow(
+        gaussian,
+        rgba(0, 0, 0, 0.4),
+        15,
+        0.4,
+        0,
+        0
+    );
+}
+
+/* === Fondo de color Café Oscuro con sombra más marcada === */
+.fondo-cafe-oscuro {
+    -fx-background-color: #5D4037; /* Café oscuro */
+    -fx-effect: innershadow(
+        gaussian,          /* tipo de sombra */
+        rgba(0, 0, 0, 0.7), /* color negro con transparencia */
+        15,                /* radio del desenfoque */
+        0.3,               /* spread */
+        0,                 /* offsetX */
+        0                  /* offsetY */
+    );
+}
+
+.fondo-negro {
+    -fx-background-color: #000000; /* Negro */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 10, 0.5, 0, 0);
+    -fx-border-color: transparent transparent transparent transparent;
+}
+
+/* === Separador para dividir zonas === */
+.separator {
+    -fx-background-color: transparent;
+    -fx-padding: 5px;
+}
+
+.separator .line {
+    -fx-border-color: #8D6E63;  /* Café intermedio */
+    -fx-border-width: 0 0 2px 0;
+    -fx-border-insets: 0 10 0 10;
+}
+/* === Estilo para el título "Guitarras" === */
+.titulo-guitarras {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4E342E;         /* Café oscuro */
+    -fx-font-family: "Georgia", serif;
+    -fx-effect: dropshadow(gaussian, #A1887F, 4, 0.2, 2, 2);
+    -fx-alignment: center;
+    -fx-padding: 20px;
+}
 
 .root {
     -fx-background-color: #e3c9a1;
@@ -24,73 +76,118 @@
     -fx-text-fill: #3b2c26;
     -fx-font-weight: bold;
 }
-.tabla-detalleCompra {
-    -fx-background-color: transparent; 
-    -fx-border-color: #c4a484;   
-    -fx-border-width: 1px;       
-    -fx-border-radius: 5px;      
+.tabla-bajos {
+    -fx-background-color: #f8f8f8;
+    -fx-border-color: #c4a484;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0.2, 0, 2);
-    -fx-padding: 0;             
-    -fx-base: #f8f8f8;          
+    -fx-padding: 0;
+    -fx-base: #f8f8f8;
 }
-.tabla-detalleCompra .scroll-pane {
-    -fx-background-color: #f8f8f8; 
+
+.tabla-bajos .scroll-pane {
+    -fx-background-color: transparent;
     -fx-background-insets: 0;
     -fx-padding: 0;
 }
 
-.tabla-detalleCompra .scroll-pane .viewport {
-    -fx-background-color: #f8f8f8; 
+.tabla-bajos .scroll-pane .viewport {
+    -fx-background-color: #f8f8f8;
 }
 
-.tabla-detalleCompra .scroll-pane .content {
-    -fx-background-color: #f8f8f8; 
+.tabla-bajos .scroll-pane .content {
+    -fx-background-color: #f8f8f8;
 }
 
-.tabla-detalleCompra .column-header-background {
-    -fx-background-color: linear-gradient(to bottom, #d8b38d, #c79d6c); 
-    -fx-background-radius: 5px 5px 0 0; 
-    -fx-padding: 5px 0; 
-}
-/* Encabezado de CADA COLUMNA individualmente */
-.tabla-detalleCompra .column-header {
-    -fx-background-color: transparent; 
+.tabla-bajos .scroll-bar:horizontal,
+.tabla-bajos .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-opacity: 1;
 }
 
-.tabla-detalleCompra .column-header .label {
-    -fx-text-fill: #4a382d;       
-    -fx-font-weight: bold;       
-    -fx-font-size: 13px;          
-    -fx-alignment: center;        
+.tabla-bajos .scroll-bar:horizontal .track,
+.tabla-bajos .scroll-bar:vertical .track {
+    -fx-background-color: #e0d5c8;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0;
+    -fx-padding: 2;
 }
-.tabla-detalleCompra .table-cell {
-    -fx-background-color: transparent; 
-    -fx-border-color: #e0d5c8;    
-    -fx-border-width: 0 0 1px 0;  
-    -fx-padding: 8px 10px;       
-    -fx-alignment: center-left;   
-    -fx-text-fill: #333333;       
-    -fx-font-size: 13px;        
-    -fx-table-cell-border-color: #e0d5c8; 
+
+.tabla-bajos .scroll-bar:horizontal .thumb,
+.tabla-bajos .scroll-bar:vertical .thumb {
+    -fx-background-color: #c79d6c;
+    -fx-background-insets: 0;
+    -fx-background-radius: 5;
 }
-.tabla-detalleCompra .table-row-cell {
-    -fx-background-color: white; 
+
+.tabla-bajos .scroll-bar:horizontal .increment-button,
+.tabla-bajos .scroll-bar:horizontal .decrement-button,
+.tabla-bajos .scroll-bar:vertical .increment-button,
+.tabla-bajos .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-padding: 0;
 }
-.tabla-detalleCompra .table-row-cell:odd {
+
+.tabla-bajos .scroll-bar:horizontal .increment-arrow,
+.tabla-bajos .scroll-bar:horizontal .decrement-arrow,
+.tabla-bajos .scroll-bar:vertical .increment-arrow,
+.tabla-bajos .scroll-bar:vertical .decrement-arrow {
+    -fx-shape: " ";
+    -fx-padding: 0;
+}
+
+.tabla-bajos .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, #d8b38d, #c79d6c);
+    -fx-background-radius: 5px 5px 0 0;
+    -fx-padding: 5px 0;
+    -fx-border-insets: 0;
+}
+
+.tabla-bajos .column-header {
+    -fx-background-color: transparent;
+}
+
+.tabla-bajos .column-header .label {
+    -fx-text-fill: #4a382d;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-alignment: center;
+}
+
+.tabla-bajos .table-cell {
+    -fx-background-color: transparent;
+    -fx-border-color: #e0d5c8;
+    -fx-border-width: 0 0 1px 0;
+    -fx-padding: 8px 10px;
+    -fx-alignment: center-left;
+    -fx-text-fill: #333333;
+    -fx-font-size: 11px;
+    -fx-table-cell-border-color: #e0d5c8;
+    -fx-background-insets: 0;
+}
+
+.tabla-bajos .table-row-cell {
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-cell-size: 35px;
+}
+.tabla-bajos .table-row-cell:odd {
     -fx-background-color: #f5f5f5;
 }
-.tabla-detalleCompra .table-row-cell:even {
-    -fx-background-color: white; 
+.tabla-bajos .table-row-cell:even {
+    -fx-background-color: white;
 }
 
-.tabla-detalleCompra .table-row-cell:selected {
-    -fx-background-color: #c7a47e; 
+.tabla-bajos .table-row-cell:selected {
+    -fx-background-color: #c7a47e;
 }
-.tabla-detalleCompra .table-row-cell:selected .table-cell {
-    -fx-text-fill: white; 
+.tabla-bajos .table-row-cell:selected .table-cell {
+    -fx-text-fill: white;
 }
-.tabla-detalleCompra .table-row-cell:hover {
-    -fx-background-color: #f0e6da; 
+.tabla-bajos .table-row-cell:hover {
+    -fx-background-color: #f0e6da;
 }
 
 .text-field { 
@@ -99,7 +196,7 @@
     -fx-border-width: 1px;         
     -fx-border-radius: 5px;        
     -fx-padding: 8px 10px;         
-    -fx-font-size: 14px;           
+    -fx-font-size: 12px;           
     -fx-text-fill: #333333;       
     -fx-highlight-fill: #c79d6c;   
     -fx-highlight-text-fill: white; 
